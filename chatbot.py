@@ -22,8 +22,8 @@ load_dotenv()
 openai_api_key = os.getenv('OPENAI_API_KEY')
 
 # Initialize OpenAI LLM model using GPT-4 turbo
-llm = ChatOpenAI(model_name="gpt-4", openai_api_key=openai_api_key, temperature=0.4)
-chat_model = ChatOpenAI(model_name="gpt-4", streaming=True, openai_api_key=openai_api_key, temperature=0.4)
+llm = ChatOpenAI(model_name="gpt-4o", openai_api_key=openai_api_key, temperature=0.4)
+chat_model = ChatOpenAI(model_name="gpt-4o", streaming=True, openai_api_key=openai_api_key, temperature=0.4)
 
 # Load documents for RAG using SimpleDirectoryLoader
 document_loader = DirectoryLoader("./data", glob="**/*.txt")
